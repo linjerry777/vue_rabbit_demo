@@ -14,9 +14,8 @@ onMounted(() => getNewList());
 </script>
 
 <template>
-  <HomePanel title="新鮮好物" sub-title="新鮮好物 好多商品"></HomePanel>
-  <!-- 下面是插槽主体内容模版
-  <ul class="goods-list">
+  <HomePanel title="新鮮好物" sub-title="新鮮好物 好多商品">
+    <ul class="goods-list">
     <li v-for="item in newList" :key="item.id">
       <RouterLink to="/">
         <img :src="item.picture" alt="" />
@@ -25,7 +24,10 @@ onMounted(() => getNewList());
       </RouterLink>
     </li>
   </ul>
-  -->
+  </HomePanel>
+  <!-- 下面是插槽主体内容模版 -->
+  
+ 
 </template>
 
 <style scoped lang="scss">

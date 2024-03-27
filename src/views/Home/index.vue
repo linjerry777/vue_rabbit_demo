@@ -16,15 +16,11 @@ import HomePanel from "./components/HomePanel.vue";
   <HomeHot />
   <homeProduct />
   <!-- 面板 -->
-  <HomePanel title="新鮮好物" sub-title="新鮮好物 好多商品">
-    <div>內容物</div>
-  </HomePanel>
-  <HomePanel title="人氣推薦" sub-title="人氣推薦 好多商品">
-    <div>內容物</div>
-  </HomePanel>
+  <HomePanel title="新鮮好物" sub-title="新鮮好物 好多商品"> </HomePanel>
+  <HomePanel title="人氣推薦" sub-title="人氣推薦 好多商品"> </HomePanel>
 </template>
 <style lang="scss" scoped>
 .container {
-  position: relative;
+  display: flex;
 }
 </style>
