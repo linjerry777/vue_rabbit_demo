@@ -1,15 +1,18 @@
 <script setup>
-import HomePanel from './HomePanel.vue'
-import {getGoodsAPI} from '@/apis/home.js'
-import {ref,onMounted} from 'vue'
-const goodsProduct = ref([])
-const getGoods = async ()=>{
-    const {data:{result}} = await getGoodsAPI()
-    goodsProduct.value = result
-}
+import HomePanel from "./HomePanel.vue";
+import { getGoodsAPI } from "@/apis/home.js";
+import { ref, onMounted } from "vue";
+import GoodsItem from "./GoodsItem.vue";
+const goodsProduct = ref([]);
+const getGoods = async () => {
+  const {
+    data: { result },
+  } = await getGoodsAPI();
+  goodsProduct.value = result;
+};
 
-onMounted(()=>{
-    getGoods()
+onMounted(() => {
+  getGoods();
 });
 </script>
 
@@ -24,14 +27,10 @@ onMounted(()=>{
             <span>{{ cate.saleInfo }}</span>
           </strong>
         </RouterLink>
+
         <ul class="goods-list">
-          <li v-for="good in cate.goods" :key="good.id">
-            <RouterLink to="/" class="goods-item">
-              <img :src="good.picture" alt="" />
-              <p class="name ellipsis">{{ good.name }}</p>
-              <p class="desc ellipsis">{{ good.desc }}</p>
-              <p class="price">&yen;{{ good.price }}</p>
-            </RouterLink>
+          <li v-for="goods in cate.goods" :key="goods.id">
+            <GoodsItem :goods="goods"/>
           </li>
         </ul>
       </div>
@@ -39,7 +38,7 @@ onMounted(()=>{
   </div>
 </template>
 
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .home-product {
   background: #fff;
   margin-top: 20px;
@@ -123,42 +122,6 @@ onMounted(()=>{
         &:nth-child(4n) {
           margin-right: 0;
         }
-      }
-    }
-
-    .goods-item {
-      display: block;
-      width: 220px;
-      padding: 20px 30px;
-      text-align: center;
-      transition: all .5s;
-
-      &:hover {
-        transform: translate3d(0, -3px, 0);
-        box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
-      }
-
-      img {
-        width: 160px;
-        height: 160px;
-      }
-
-      p {
-        padding-top: 10px;
-      }
-
-      .name {
-        font-size: 16px;
-      }
-
-      .desc {
-        color: #999;
-        height: 29px;
-      }
-
-      .price {
-        color: $priceColor;
-        font-size: 20px;
       }
     }
   }
