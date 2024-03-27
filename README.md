@@ -1,35 +1,8 @@
-# vue-rabbit
+# vue_rabbit
+https://www.yuque.com/fechaichai/td99ck/yhbgq98ln3x15l12#V3adK
 
-This template should help get you started developing with Vue 3 in Vite.
+##
+https://apifox.com/apidoc/shared-fa9274ac-362e-4905-806b-6135df6aa90e/api-24945669
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+##
+https://www.bilibili.com/video/BV1Ac411K7EQ?p=36&spm_id_from=pageDriver&vd_source=e652e3284e7c9eb73c44fef9495fba78
