@@ -12,3 +12,14 @@ import httpInstance from "@/utils/http";
         url:'/home/new'
     })
  }
+ export function  getHotAPI() {
+    return httpInstance({
+        url:'/home/hot'
+    })
+ }
+
+export const getGoodsAPI = () => {
+  return httpInstance({
+    url: '/home/goods'
+  })
+}

@@ -27,8 +27,9 @@ const categoryStore = useCategoryStore()
 <style scoped lang='scss'>
 .app-header {
     background: #fff;
-
+    
     .container {
+        height: 84px;
         display: flex;
         align-items: center;
     }

@@ -27,12 +27,15 @@ defineProps({
 <style scoped lang="scss">
 .home-panel {
   background-color: #fff;
-
+  width: 1280px;
+  margin: 0 auto;
   .head {
     padding: 40px 0;
     display: flex;
     align-items: flex-end;
-
+    ul{
+      padding: 0;
+    }
     h3 {
       flex: 1;
       font-size: 32px;
