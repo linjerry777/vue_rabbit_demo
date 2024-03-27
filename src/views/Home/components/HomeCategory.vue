@@ -38,7 +38,7 @@ const categoryStore = useCategoryStore()
     width: 250px;
     height: 500px;
     background: rgba(0, 0, 0, 0.8);
-    position: relative;
+    position: absolute;
     z-index: 99;
 
     .menu {

@@ -21,6 +21,7 @@ import HomePanel from "./components/HomePanel.vue";
 </template>
 <style lang="scss" scoped>
 .container {
-  display: flex;
+  width: fit-content;
+  margin: 0 auto;
 }
 </style>
