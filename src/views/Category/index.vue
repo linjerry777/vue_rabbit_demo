@@ -1,36 +1,15 @@
 <script setup>
-import { getCategoryAPI } from '@/apis/category'
-import { onMounted, ref } from 'vue'
-import { useRoute, onBeforeRouteUpdate } from 'vue-router';
-import { getBannerAPI } from '@/apis/home.js'
+
 import GoodsItem from '@/views/Home/components/GoodsItem.vue'
+import { useBanner } from './composables/useBanner'
+import { useCategory } from './composables/useCategory'
 
+const { bannerList } = useBanner();
+const { categoryData } = useCategory();
 
-const categoryData = ref({})
-const route = useRoute()
-
-//如果一開始沒id 就用route.params.id
-const getCategory = async (id = route.params.id) => {
-    const { data: { result } } = await getCategoryAPI(id)
-    categoryData.value = result
-
-}
-onMounted(() => getCategory());
-
-onBeforeRouteUpdate((to) => {
-    getCategory(to.params.id)
-})
 
 // banner
-const bannerList = ref([])
-const getBanner = async () => {
-    const { data: { result } } = await getBannerAPI({ distributionSite: '2' })
-    console.log(result);
-    bannerList.value = result
-}
-onMounted(() => {
-    getBanner()
-});
+
 </script>
 
 <template>
@@ -55,7 +34,7 @@ onMounted(() => {
                 <h3>全部分类</h3>
                 <ul>
                     <li v-for="i in categoryData.children" :key="i.id">
-                        <RouterLink to="/">
+                        <RouterLink :to="`/category/sub/${i.id}`">
                             <img :src="i.picture" />
                             <p>{{ i.name }}</p>
                         </RouterLink>
