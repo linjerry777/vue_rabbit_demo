@@ -5,8 +5,11 @@
                 <RouterLink to="/">小兔鲜</RouterLink>
             </h1>
             <ul class="app-header-nav">
+                <li class="home">
+                    <RouterLink to="/">首頁</RouterLink>
+                </li>
                 <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
-                    <RouterLink to="/">{{item.name}}</RouterLink>
+                    <RouterLink active-class="active" :to="`/category/${item.id}`">{{ item.name }}</RouterLink>
                 </li>
             </ul>
             <div class="search">
@@ -20,14 +23,14 @@
 </template>
 <script setup>
 
-import {useCategoryStore} from '@/stores/category'
-const categoryStore = useCategoryStore()
+import { useCategoryStore } from '@/stores/category'
+const categoryStore = useCategoryStore();
 </script>
 
 <style scoped lang='scss'>
 .app-header {
     background: #fff;
-    
+
     .container {
         height: 84px;
         display: flex;
