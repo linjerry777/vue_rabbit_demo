@@ -1,15 +1,18 @@
 <script setup>
-import { getDetail } from '@/apis/detail'
-import { ref, onMounted } from 'vue'
+import { getDetail } from "@/apis/detail";
+import { ref, onMounted } from "vue";
 import { useRoute, onBeforeRouteUpdate } from "vue-router";
+import ImageView from "@/components/ImageView/index.vue"
+import DeatilHot from "./components/DeatilHot.vue";
 
-
-const goods = ref({})
-const route = useRoute()
+const goods = ref({});
+const route = useRoute();
 const getGoods = async () => {
-    const { data: { result } } = await getDetail(route.params.id)
-    goods.value = result
-}
+    const {
+        data: { result },
+    } = await getDetail(route.params.id);
+    goods.value = result;
+};
 onMounted(() => getGoods());
 </script>
 
@@ -25,7 +28,7 @@ onMounted(() => getGoods());
                     <el-breadcrumb-item :to="{ path: `/category/sub/${goods.categories[0].id}` }">{{
             goods.categories[0].name }}
                     </el-breadcrumb-item>
-                    <el-breadcrumb-item>抓绒保暖，毛毛虫子儿童运动鞋</el-breadcrumb-item>
+                    <el-breadcrumb-item>{{goods.name}}</el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
             <!-- 商品信息 -->
@@ -34,12 +37,12 @@ onMounted(() => getGoods());
                     <div class="goods-info">
                         <div class="media">
                             <!-- 图片预览区 -->
-
+                            <ImageView :image-list="goods.mainPictures" />
                             <!-- 统计数量 -->
                             <ul class="goods-sales">
                                 <li>
                                     <p>销量人气</p>
-                                    <p> {{ goods.salesCount }}</p>
+                                    <p>{{ goods.salesCount }}</p>
                                     <p><i class="iconfont icon-task-filling"></i>销量人气</p>
                                 </li>
                                 <li>
@@ -61,8 +64,8 @@ onMounted(() => getGoods());
                         </div>
                         <div class="spec">
                             <!-- 商品信息区 -->
-                            <p class="g-name"> {{ goods.name }} </p>
-                            <p class="g-desc">{{ goods.desc }} </p>
+                            <p class="g-name">{{ goods.name }}</p>
+                            <p class="g-desc">{{ goods.desc }}</p>
                             <p class="g-price">
                                 <span>{{ goods.oldPrice }}</span>
                                 <span> {{ goods.price }}</span>
@@ -88,11 +91,8 @@ onMounted(() => getGoods());
 
                             <!-- 按钮组件 -->
                             <div>
-                                <el-button size="large" class="btn">
-                                    加入购物车
-                                </el-button>
+                                <el-button size="large" class="btn"> 加入购物车 </el-button>
                             </div>
-
                         </div>
                     </div>
                     <div class="goods-footer">
@@ -111,14 +111,16 @@ onMounted(() => getGoods());
                                         </li>
                                     </ul>
                                     <!-- 图片 -->
-                                    <img src="" alt="">
-
+                                    <img v-for="img in goods.details.pictures" :src="img" :key="img" alt="" />
                                 </div>
                             </div>
                         </div>
                         <!-- 24热榜+专题推荐 -->
                         <div class="goods-aside">
-
+                            <!-- 24小時 -->
+                            <DeatilHot :hot-type="1" />
+                            <!-- 周 -->
+                            <DeatilHot :hot-type="2" />
                         </div>
                     </div>
                 </div>
@@ -127,8 +129,7 @@ onMounted(() => getGoods());
     </div>
 </template>
 
-
-<style scoped lang='scss'>
+<style scoped lang="scss">
 .xtx-goods-page {
     .goods-info {
         min-height: 600px;
@@ -360,7 +361,6 @@ onMounted(() => getGoods());
 
 .btn {
     margin-top: 20px;
-
 }
 
 .bread-container {
