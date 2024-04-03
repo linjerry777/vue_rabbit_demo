@@ -1,13 +1,22 @@
 import axios from "axios";
+import 'element-plus/theme-chalk/el-message.css'
+import { ElMessage } from 'element-plus'
+import {useUserStore} from '@/stores/user.js'
+import router from '@/router'
+
 const httpInstance =  axios.create({
     baseURL:'http://pcapi-xiaotuxian-front-devtest.itheima.net',
     timeout: 5000
 })
 
-
 // 添加请求拦截器
 httpInstance.interceptors.request.use(function (config) {
     // 在发送请求之前做些什么
+  const userStore = useUserStore();
+  const token = userStore.userInfo.token
+  if(token){
+    config.headers['Authorization'] = `Bearer ${token}`
+  }
     return config;
   }, function (error) {
     // 对请求错误做些什么
@@ -22,6 +31,17 @@ httpInstance.interceptors.response.use(function (response) {
   }, function (error) {
     // 超出 2xx 范围的状态码都会触发该函数。
     // 对响应错误做点什么
+    // console.log(error);
+    ElMessage({type: 'warning', message:error.response.data.msg})
+
+    //401token
+    const userStore = useUserStore();
+    
+
+    if(error.response.status === 401) {
+      userStore.cleatUserInfo()
+      router.push('/login')
+    }
     return Promise.reject(error);
   });
   
