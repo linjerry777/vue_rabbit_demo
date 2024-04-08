@@ -131,6 +131,7 @@ const { categoryData } = useCategory();
 
     .bread-container {
         padding: 25px 0;
+        // padding-left: 48px;
     }
 }
 

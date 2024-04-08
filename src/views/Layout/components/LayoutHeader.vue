@@ -36,6 +36,7 @@ const categoryStore = useCategoryStore();
         height: 84px;
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .logo {
