@@ -10,7 +10,7 @@ export const useUserStore = defineStore('user', () => {
     const res = await loginAPI({ account, password })
     console.log(res);
     userInfo.value = res.data.result
-    mergeCartAPI(cartStore.cartList.map(item=>{
+    await mergeCartAPI(cartStore.cartList.map(item=>{
       return{
         skuId: item.skuId,
         selected: item.selected,
