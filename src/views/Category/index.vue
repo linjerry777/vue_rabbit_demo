@@ -18,7 +18,7 @@ const { categoryData } = useCategory();
             <!-- 面包屑 -->
             <div class="bread-container">
                 <el-breadcrumb separator=">">
-                    <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+                    <el-breadcrumb-item :to="{ path: '/' }">首頁</el-breadcrumb-item>
                     <el-breadcrumb-item>{{ categoryData.name }}</el-breadcrumb-item>
                 </el-breadcrumb>
             </div>
@@ -31,7 +31,7 @@ const { categoryData } = useCategory();
                 </el-carousel>
             </div>
             <div class="sub-list">
-                <h3>全部分类</h3>
+                <h3>全部分類</h3>
                 <ul>
                     <li v-for="i in categoryData.children" :key="i.id">
                         <RouterLink :to="`/category/sub/${i.id}`">

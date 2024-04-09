@@ -25,7 +25,7 @@ onMounted(() => getNewList());
     </li>
   </ul>
   </HomePanel>
-  <!-- 下面是插槽主体内容模版 -->
+  <!-- 下面是插槽主體內容模版 -->
   
  
 </template>

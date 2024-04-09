@@ -11,7 +11,7 @@ const { y } = useScroll(window);
     <div class="app-header-sticky" :class="{ show: y > 78 }">
         <div class="container">
             <RouterLink class="logo" to="/" />
-            <!-- 导航区域 -->
+            <!-- 導航區域 -->
             <ul class="app-header-nav ">
                 <li class="home">
                     <RouterLink to="/">首頁</RouterLink>
@@ -24,7 +24,7 @@ const { y } = useScroll(window);
 
             <div class="right">
                 <RouterLink to="/">品牌</RouterLink>
-                <RouterLink to="/">专题</RouterLink>
+                <RouterLink to="/">專題</RouterLink>
             </div>
         </div>
     </div>
@@ -41,12 +41,12 @@ const { y } = useScroll(window);
     z-index: 999;
     background-color: #fff;
     border-bottom: 1px solid #e4e4e4;
-    // 此处为关键样式!!!
-    // 状态一：往上平移自身高度 + 完全透明
+    // 此處為關鍵樣式!!!
+    // 狀態一：往上平移自身高度 + 完全透明
     transform: translateY(-100%);
     opacity: 0;
 
-    // 状态二：移除平移 + 完全不透明
+    // 狀態二：移除平移 + 完全不透明
     &.show {
         transition: all 0.3s linear;
         transform: none;

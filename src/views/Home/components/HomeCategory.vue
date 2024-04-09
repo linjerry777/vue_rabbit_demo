@@ -9,9 +9,9 @@ const categoryStore = useCategoryStore()
             <li v-for="item in categoryStore.categoryList" :key="item">
                 <RouterLink to="/">{{ item.name }}</RouterLink>
                 <RouterLink v-for="i in item.children.slice(0, 2)" :key="i" to="/">{{ i.name }}</RouterLink>
-                <!-- 弹层layer位置 -->
+                <!-- 彈層layer位置 -->
                 <div class="layer">
-                    <h4>分类推荐 <small>根据您的购买或浏览记录推荐</small></h4>
+                    <h4>分類推薦 <small>根據您的購買或瀏覽記錄推薦</small></h4>
                     <ul>
                         <li v-for="i in item.goods" :key="i.id">
                             <RouterLink to="/">
@@ -142,7 +142,7 @@ const categoryStore = useCategoryStore()
                 }
             }
 
-            // 关键样式  hover状态下的layer盒子变成block
+            // 關鍵樣式  hover狀態下的layer盒子變成block
             &:hover {
                 .layer {
                     display: block;
