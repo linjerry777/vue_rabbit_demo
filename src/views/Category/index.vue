@@ -73,7 +73,7 @@ const { categoryData } = useCategory();
             display: flex;
             padding: 0 32px;
             flex-wrap: wrap;
-
+            justify-content: center;
             li {
                 width: 168px;
                 height: 160px;
@@ -132,6 +132,9 @@ const { categoryData } = useCategory();
     .bread-container {
         padding: 25px 0;
         // padding-left: 48px;
+        width: 1240px;
+        margin: 0 auto;
+        font-size: 16px;
     }
 }
 
