@@ -166,6 +166,7 @@ const addCart = async () => {
 
 <style scoped lang="scss">
 .xtx-goods-page {
+    width: 80%;
     .goods-info {
         min-height: 600px;
         background: #fff;

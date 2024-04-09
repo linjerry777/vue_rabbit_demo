@@ -26,7 +26,8 @@
 .container {
   display: flex;
   padding-top: 20px;
-
+  width: 90%;
+  margin: 0 auto;
   .xtx-member-aside {
     width: 220px;
     margin-right: 20px;
