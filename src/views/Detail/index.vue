@@ -28,7 +28,7 @@ onMounted(() => {
 //skuChange
 let skuObj = {};
 const skuChange = (sku) => {
-  console.log(sku);
+
   skuObj = sku;
 };
 

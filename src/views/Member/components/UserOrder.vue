@@ -28,12 +28,12 @@ const tabTypes = [
 ];
 // 订单列表
 const tabChange = (type)=>{
-  console.log(type);
+  
   params.value.orderState = type
   getOrderList()
 }
 const pageChange = (page)=>{
-  console.log(page);
+  
   params.value.page = page
   getOrderList()
 }

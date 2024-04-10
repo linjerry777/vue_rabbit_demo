@@ -9,7 +9,6 @@ export const useCartStore = defineStore('cart', () => {
   const cartList = ref([])
   const updateNewList = async()=>{
     const res = await findNewCartAPI()
-    console.log(res,123);
     cartList.value = res.data.result
   }
   const addCart = async(goods) => {

@@ -8,7 +8,6 @@ export const useUserStore = defineStore('user', () => {
   const cartStore = useCartStore();
   const getUserInfo =  async({ account, password })=>{
     const res = await loginAPI({ account, password })
-    console.log(res);
     userInfo.value = res.data.result
     await mergeCartAPI(cartStore.cartList.map(item=>{
       return{

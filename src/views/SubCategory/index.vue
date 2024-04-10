@@ -28,7 +28,7 @@ onMounted(() => getGoodList());
 
 //tab切換資料
 const tabChange = () => {
-    console.log('object');
+    
     reqData.value.page = 1
     getGoodList()
 };
@@ -36,7 +36,7 @@ const tabChange = () => {
 //無限加載
 const disabled = ref(false)
 const load = async () => {
-    console.log('123');
+    
 
     //獲取下一頁資料
     reqData.value.page++
@@ -84,15 +84,16 @@ const load = async () => {
 .bread-container {
     padding: 25px 0;
     color: #666;
-    // width: 1440px;
-    // margin: 0 auto;
+    width: 1290px;
+    margin: 0 auto;
     padding-left: 10px;
 }
 
 .sub-container {
     padding: 20px 10px;
     background-color: #fff;
-
+    width: 1280px;
+    margin: 0 auto;
     .body {
         display: flex;
         flex-wrap: wrap;

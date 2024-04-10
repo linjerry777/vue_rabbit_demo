@@ -40,7 +40,7 @@ const doLogin = () => {
   const { account, password } = form.value
 
   formRef.value.validate(async (valid) => {
-    console.log(valid);
+    
     if (valid) {
       //Login
      await userStore.getUserInfo({ account, password })
