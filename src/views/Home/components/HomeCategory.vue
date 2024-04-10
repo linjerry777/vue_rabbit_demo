@@ -1,6 +1,6 @@
 <script setup>
 import { useCategoryStore } from '@/stores/category'
-const categoryStore = useCategoryStore()
+const categoryStore = useCategoryStore();
 </script>
 
 <template>
@@ -42,8 +42,9 @@ const categoryStore = useCategoryStore()
     z-index: 99;
 
     .menu {
+        padding-left: 25px;
         li {
-            padding-left: 40px;
+            // padding-left: 40px;
             height: 55px;
             line-height: 55px;
 
@@ -86,7 +87,7 @@ const categoryStore = useCategoryStore()
                     flex-wrap: wrap;
 
                     li {
-                        width: 310px;
+                        width: 285px;
                         height: 120px;
                         margin-right: 15px;
                         margin-bottom: 15px;
@@ -116,7 +117,7 @@ const categoryStore = useCategoryStore()
 
                             .info {
                                 padding-left: 10px;
-                                line-height: 24px;
+                                line-height: 19px;
                                 overflow: hidden;
 
                                 .name {

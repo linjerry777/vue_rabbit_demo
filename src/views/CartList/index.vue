@@ -98,7 +98,8 @@ const allCheck = (selected)=>{
   .cart {
     background: #fff;
     color: #666;
-
+    margin:0 auto;
+    width:1280px;
     table {
       border-spacing: 0;
       border-collapse: collapse;
@@ -190,7 +191,8 @@ const allCheck = (selected)=>{
     font-size: 16px;
     justify-content: space-between;
     padding: 0 30px;
-
+    width:1280px;
+    margin:0 auto;
     .xtx-checkbox {
       color: #999;
     }

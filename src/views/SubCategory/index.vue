@@ -84,6 +84,9 @@ const load = async () => {
 .bread-container {
     padding: 25px 0;
     color: #666;
+    // width: 1440px;
+    // margin: 0 auto;
+    padding-left: 10px;
 }
 
 .sub-container {
@@ -94,6 +97,7 @@ const load = async () => {
         display: flex;
         flex-wrap: wrap;
         padding: 0 10px;
+        justify-content: center;
     }
 
     .goods-item {

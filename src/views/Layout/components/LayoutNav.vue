@@ -23,7 +23,7 @@ const confirm = () => {
               </template>
             </el-popconfirm>
           </li>
-          <li><a href="javascript:;" >我的訂單</a></li>
+          <li><a href="javascript:;" @click="$router.push('/member/order')">我的訂單</a></li>
           <li><a href="javascript:;" @click="$router.push('/member/user')">會員中心</a></li>
         </template>
         <template v-else>

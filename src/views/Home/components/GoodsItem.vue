@@ -7,7 +7,7 @@ defineProps({
 });
 </script>
 <template>
-  <RouterLink to="/" class="goods-item">
+  <RouterLink :to="`/detail/${goods.id}`" class="goods-item">
     <img :src="goods.picture" alt="" />
     <p class="name ellipsis">{{ goods.name }}</p>
     <p class="desc ellipsis">{{ goods.desc }}</p>
@@ -18,7 +18,7 @@ defineProps({
 .goods-item {
   display: block;
   width: 220px;
-  padding: 20px 30px;
+  padding: 10px 25px;
   text-align: center;
   transition: all 0.5s;
 

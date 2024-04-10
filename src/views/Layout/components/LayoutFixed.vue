@@ -56,6 +56,7 @@ const { y } = useScroll(window);
     .container {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     .logo {

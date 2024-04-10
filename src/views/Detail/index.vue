@@ -166,12 +166,14 @@ const addCart = async () => {
 
 <style scoped lang="scss">
 .xtx-goods-page {
-    width: 80%;
+    // width: 80%;
+    margin: 0 auto;
     .goods-info {
         min-height: 600px;
         background: #fff;
         display: flex;
-
+        width: 1280px;
+        margin: 0 auto;
         .media {
             width: 580px;
             height: 600px;
@@ -187,7 +189,7 @@ const addCart = async () => {
     .goods-footer {
         display: flex;
         margin-top: 20px;
-
+        justify-content: center;
         .goods-article {
             width: 940px;
             margin-right: 20px;
@@ -401,5 +403,7 @@ const addCart = async () => {
 
 .bread-container {
     padding: 25px 0;
+    width: 1280px;
+    margin: 0 auto;
 }
 </style>

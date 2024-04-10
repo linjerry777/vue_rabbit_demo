@@ -28,6 +28,7 @@
   padding-top: 20px;
   width: 90%;
   margin: 0 auto;
+  justify-content: center;
   .xtx-member-aside {
     width: 220px;
     margin-right: 20px;

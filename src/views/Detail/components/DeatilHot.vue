@@ -28,7 +28,7 @@ onMounted(() => getHotList());
     <div class="goods-hot">
         <h3>{{ hotType == 1 ? '24小時熱榜' : '周熱榜' }}</h3>
         <!-- 商品区块 -->
-        <RouterLink to="/" class="goods-item" v-for="item in HotList" :key="item.id">
+        <RouterLink :to="`/detail/${item.id}`" class="goods-item" v-for="item in HotList" :key="item.id">
             <img :src="item.picture" alt="" />
             <p class="name ellipsis">{{ item.name }}</p>
             <p class="desc ellipsis">{{ item.desc }}</p>

@@ -68,7 +68,7 @@ const { categoryData } = useCategory();
     .sub-list {
         margin-top: 20px;
         background-color: #fff;
-
+        
         ul {
             display: flex;
             padding: 0 32px;
@@ -126,6 +126,8 @@ const { categoryData } = useCategory();
             display: flex;
             justify-content: space-around;
             padding: 0 40px 30px;
+            width: 1280px;
+            margin: 0 auto;
         }
     }
 

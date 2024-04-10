@@ -42,6 +42,7 @@ onMounted(() => {
 .home-product {
   background: #fff;
   margin-top: 20px;
+  margin-bottom: 20px;
   .sub {
     margin-bottom: 2px;
 
@@ -72,7 +73,7 @@ onMounted(() => {
 
       img {
         width: 100%;
-        height: 100%;
+        // height: 100%;
       }
 
       .label {
@@ -105,7 +106,7 @@ onMounted(() => {
     }
 
     .goods-list {
-      width: 990px;
+      width: 1090px;
       display: flex;
       flex-wrap: wrap;
 
