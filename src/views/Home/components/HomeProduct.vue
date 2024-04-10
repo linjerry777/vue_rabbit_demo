@@ -3,7 +3,10 @@ import HomePanel from "./HomePanel.vue";
 import { getGoodsAPI } from "@/apis/home.js";
 import { ref, onMounted } from "vue";
 import GoodsItem from "./GoodsItem.vue";
+
+
 const goodsProduct = ref([]);
+
 const getGoods = async () => {
   const {
     data: { result },
@@ -14,6 +17,8 @@ const getGoods = async () => {
 onMounted(() => {
   getGoods();
 });
+
+
 </script>
 
 <template>
