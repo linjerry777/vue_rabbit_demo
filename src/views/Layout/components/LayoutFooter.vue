@@ -8,11 +8,7 @@
           <dd><i class="iconfont icon-kefu"></i> 在線客服</dd>
           <dd><i class="iconfont icon-question"></i> 問題反饋</dd>
         </dl>
-        <dl>
-          <dt>關注我們</dt>
-          <dd><i class="iconfont icon-weixin"></i> 公眾號</dd>
-          <dd><i class="iconfont icon-weibo"></i> 微博</dd>
-        </dl>
+
         <dl>
           <dt>下載APP</dt>
           <dd class="qrcode"><img src="" /></dd>
@@ -24,7 +20,7 @@
         </dl>
         <dl>
           <dt>服務熱線</dt>
-          <dd class="hotline">400-0000-000 <small>周一至周日 8:00-18:00</small></dd>
+          <dd class="hotline">09-1234-5678 <small>周一至周日 8:00-18:00</small></dd>
         </dl>
       </div>
     </div>
@@ -56,7 +52,7 @@
             <a href="javascript:;">搜索推薦</a>
             <a href="javascript:;">友情鏈接</a>
           </p>
-          <p>CopyRight © 小兔鮮兒</p>
+          <p>CopyRight © Jerry-commerce</p>
         </div>
       </div>
     </div>

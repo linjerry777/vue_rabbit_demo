@@ -42,6 +42,10 @@ httpInstance.interceptors.response.use(function (response) {
       userStore.cleatUserInfo()
       router.push('/login')
     }
+    if(error.response.status === 400) {
+      userStore.cleatUserInfo()
+      router.push('/')
+    }
     return Promise.reject(error);
   });
   

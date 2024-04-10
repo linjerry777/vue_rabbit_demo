@@ -62,7 +62,7 @@ const { y } = useScroll(window);
     .logo {
         width: 200px;
         height: 80px;
-        background: url("@/assets/images/logo.png") no-repeat right 2px;
+        background: url("@/assets/images/logolin2.svg") no-repeat right 2px;
         background-size: 160px auto;
     }
 

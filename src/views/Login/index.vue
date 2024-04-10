@@ -59,11 +59,11 @@ const doLogin = () => {
   <div>
     <header class="login-header">
       <div class="container m-top-20">
-        <h1 class="logo">
-          <RouterLink to="/">小兔鲜</RouterLink>
-        </h1>
+        <RouterLink to="/"
+        ><img src="../../assets/images/logolin2.svg" alt=""
+      /></RouterLink>
         <RouterLink class="entry" to="/">
-          进入网站首页
+          進入網站首頁
           <i class="iconfont icon-angle-right"></i>
           <i class="iconfont icon-angle-right"></i>
         </RouterLink>
@@ -72,23 +72,23 @@ const doLogin = () => {
     <section class="login-section">
       <div class="wrapper">
         <nav>
-          <a href="javascript:;">账户登录</a>
+          <a href="javascript:;">賬戶登錄</a>
         </nav>
         <div class="account-box">
           <div class="form">
             <el-form ref="formRef" :model="form" :rules="rules" label-position="right" label-width="60px" status-icon>
-              <el-form-item prop="account" label="账户">
+              <el-form-item prop="account" label="賬戶">
                 <el-input v-model="form.account" />
               </el-form-item>
-              <el-form-item prop="password" label="密码">
+              <el-form-item prop="password" label="密碼">
                 <el-input v-model="form.password" />
               </el-form-item>
               <el-form-item prop="agree" label-width="22px">
                 <el-checkbox v-model="form.agree" size="large">
-                  我已同意隐私条款和服务条款
+                  我已同意隱私條款和服務條款
                 </el-checkbox>
               </el-form-item>
-              <el-button size="large" class="subBtn" @click="doLogin">点击登录</el-button>
+              <el-button size="large" class="subBtn" @click="doLogin">點擊登錄</el-button>
             </el-form>
           </div>
         </div>
@@ -98,15 +98,15 @@ const doLogin = () => {
     <footer class="login-footer">
       <div class="container">
         <p>
-          <a href="javascript:;">关于我们</a>
-          <a href="javascript:;">帮助中心</a>
-          <a href="javascript:;">售后服务</a>
-          <a href="javascript:;">配送与验收</a>
-          <a href="javascript:;">商务合作</a>
-          <a href="javascript:;">搜索推荐</a>
-          <a href="javascript:;">友情链接</a>
+          <a href="javascript:;">關於我們</a>
+          <a href="javascript:;">幫助中心</a>
+          <a href="javascript:;">售後服務</a>
+          <a href="javascript:;">配送與驗收</a>
+          <a href="javascript:;">商務合作</a>
+          <a href="javascript:;">搜索推薦</a>
+          <a href="javascript:;">友情鏈接</a>
         </p>
-        <p>CopyRight &copy; 小兔鲜儿</p>
+        <p>CopyRight &copy; Jerry-commerce</p>
       </div>
     </footer>
   </div>
@@ -122,7 +122,10 @@ const doLogin = () => {
     align-items: flex-end;
     justify-content: space-between;
   }
-
+  img {
+    width: 163px;
+    margin-top: 15px;
+  }
   .logo {
     width: 200px;
 
@@ -146,7 +149,7 @@ const doLogin = () => {
 
   .entry {
     width: 120px;
-    margin-bottom: 38px;
+    margin-bottom: 20px;
     font-size: 16px;
 
     i {
