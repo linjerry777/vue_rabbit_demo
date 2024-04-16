@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue'
 import { getCheckInfoAPI, createOrderAPI } from '@/apis/checkout.js'
 import { useRouter } from 'vue-router';
-import { useCartStore} from '@/stores/cart'
+import { useCartStore } from '@/stores/cart'
 const cartStore = useCartStore()
 const router = useRouter();
 const checkInfo = ref({})
@@ -157,6 +157,11 @@ const createOrder = async () => {
 <style scoped lang="scss">
 .xtx-pay-checkout-page {
     margin-top: 20px;
+
+    .container {
+        width: 1240px;
+        margin: 0 auto;
+    }
 
     .wrapper {
         background: #fff;
