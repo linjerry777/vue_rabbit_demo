@@ -168,6 +168,11 @@
 
   .extra {
     background-color: #333;
+
+    .container {
+      width: 1240px;
+      margin: 0 auto;
+    }
   }
 
   .slogan {

@@ -73,6 +73,9 @@ onMounted(() => getHotList());
         .desc {
             color: #999;
             height: 29px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .price {

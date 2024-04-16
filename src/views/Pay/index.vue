@@ -29,29 +29,25 @@ const payUrl = `${baseURL}pay/aliPay?orderId=${route.query.id}&redirect=${redire
       <div class="pay-info">
         <span class="icon iconfont icon-queren2"></span>
         <div class="tip">
-          <p>订单提交成功！请尽快完成支付。</p>
-          <p>支付还剩 <span>{{time}}</span>, 超时后将取消订单</p>
+          <p>訂單提交成功！請盡快完成付款。</p>
+          <p>還剩 <span>{{time}}</span>, 超時後將取消訂單</p>
         </div>
         <div class="amount">
-          <span>应付总额：</span>
+          <span>應付總額：</span>
           <span>¥{{ payInfo.payMoney?.toFixed(2) }}</span>
         </div>
       </div>
       <!-- 付款方式 -->
       <div class="pay-type">
-        <p class="head">选择以下支付方式付款</p>
-        <div class="item">
-          <p>支付平台</p>
-          <a class="btn wx" href="javascript:;"></a>
-          <a class="btn alipay" :href="payUrl"></a>
-        </div>
+        <p class="head">選擇以下支付方式付款</p>
+  
         <div class="item">
           <p>支付方式</p>
-          <a class="btn" href="javascript:;">招商银行</a>
-          <a class="btn" href="javascript:;">工商银行</a>
-          <a class="btn" href="javascript:;">建设银行</a>
-          <a class="btn" href="javascript:;">农业银行</a>
-          <a class="btn" href="javascript:;">交通银行</a>
+          <a class="btn" href="javascript:;">台灣銀行</a>
+          <a class="btn" href="javascript:;">LINE PAY</a>
+          <a class="btn" href="javascript:;">APPLE PAY</a>
+          <a class="btn" href="javascript:;">上海銀行</a>
+          <a class="btn" href="javascript:;">台新銀行</a>
         </div>
       </div>
     </div>
@@ -61,6 +57,10 @@ const payUrl = `${baseURL}pay/aliPay?orderId=${route.query.id}&redirect=${redire
 <style scoped lang="scss">
 .xtx-pay-page {
   margin-top: 20px;
+  .container {
+    width: 1240px;
+    margin: 0 auto;
+  }
 }
 
 .pay-info {
@@ -139,13 +139,7 @@ const payUrl = `${baseURL}pay/aliPay?orderId=${route.query.id}&redirect=${redire
       border-color: $xtxColor;
     }
 
-    &.alipay {
-      background: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7b6b02396368c9314528c0bbd85a2e06.png) no-repeat center / contain;
-    }
-
-    &.wx {
-      background: url(https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/c66f98cff8649bd5ba722c2e8067c6ca.jpg) no-repeat center / contain;
-    }
+   
   }
 }
 </style>

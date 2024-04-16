@@ -37,13 +37,14 @@ const tabChange = () => {
 const disabled = ref(false)
 const load = async () => {
     
-
+    //element plus v-infinite-scroll="load"
+    //滾到底會觸發
     //獲取下一頁資料
     reqData.value.page++
     const { data: { result } } = await getSubCategoryAPI(reqData.value)
     goodList.value = [...goodList.value, ...result.items]
 
-    //加載完
+    //沒資料了就停止往下滾
     if(result.items.length === 0){
         disabled.value = true
     }

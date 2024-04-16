@@ -1,7 +1,7 @@
 <script setup>
 import { getDetail } from "@/apis/detail";
 import { ref, onMounted } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute,onBeforeRouteUpdate } from "vue-router";
 import DeatilHot from "./components/DeatilHot.vue";
 import { ElMessage } from "element-plus";
 import { useCartStore } from "@/stores/cart";
@@ -11,10 +11,10 @@ const cartStore = useCartStore();
 const goods = ref({});
 const route = useRoute();
 
-const getGoods = async () => {
+const getGoods = async (id=route.params.id) => {
   const {
     data: { result },
-  } = await getDetail(route.params.id);
+  } = await getDetail(id);
   goods.value = result;
   if (result) {
     loading.value = false;
@@ -24,6 +24,13 @@ const getGoods = async () => {
 onMounted(() => {
   getGoods();
 });
+onBeforeRouteUpdate((to)=>{
+  // console.log(to);
+  // console.log(goods.value);
+  goods.value = {}
+  loading.value = true;
+  getGoods(to.params.id);
+})
 
 //skuChange
 let skuObj = {};

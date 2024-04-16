@@ -17,6 +17,7 @@ export function useCategory() {
   onMounted(() => getCategory());
 
   onBeforeRouteUpdate((to) => {
+    // console.log(to);
     getCategory(to.params.id);
   });
   return { categoryData };

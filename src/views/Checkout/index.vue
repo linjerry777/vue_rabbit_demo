@@ -68,7 +68,6 @@ const createOrder = async () => {
                         </div>
                         <div class="action">
                             <el-button size="large" @click="toggleFlag = true">切換地址</el-button>
-                            <el-button size="large" @click="addFlag = true">添加地址</el-button>
                         </div>
                     </div>
                 </div>
@@ -103,20 +102,6 @@ const createOrder = async () => {
                             </tr>
                         </tbody>
                     </table>
-                </div>
-                <!-- 配送時間 -->
-                <h3 class="box-title">配送時間</h3>
-                <div class="box-body">
-                    <a class="my-btn active" href="javascript:;">不限送貨時間：周一至周日</a>
-                    <a class="my-btn" href="javascript:;">工作日送貨：周一至周五</a>
-                    <a class="my-btn" href="javascript:;">雙休日、假日送貨：周六至周日</a>
-                </div>
-                <!-- 支付方式 -->
-                <h3 class="box-title">支付方式</h3>
-                <div class="box-body">
-                    <a class="my-btn active" href="javascript:;">在線支付</a>
-                    <a class="my-btn" href="javascript:;">貨到付款</a>
-                    <span style="color:#999">貨到付款需付5元手續費</span>
                 </div>
                 <!-- 金額明細 -->
                 <h3 class="box-title">金額明細</h3>
